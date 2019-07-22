@@ -1,0 +1,8 @@
+(common) {
+    tls off
+    ccron @every:1m echo "Bingo"
+}
+
+:80 {
+    import common
+}
