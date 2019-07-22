@@ -41,7 +41,7 @@ func startTask(tasks []*Task) {
 	c := cron.New()
 
 	for _, task := range tasks {
-		_, err := c.AddJob(task.Moment, &funcCommandJob{task.Command, execute})
+		err := c.AddJob(task.Moment, &funcCommandJob{task.Command, execute})
 
 		if err != nil {
 			println(fmt.Sprintf("[error] start `%s` at `%s` get error, %v", task.Command, task.Moment, err))
