@@ -3,7 +3,7 @@ package caddy_cron
 import (
 	"errors"
 	"fmt"
-	"github.com/mholt/caddy"
+	"github.com/caddyserver/caddy"
 	"reflect"
 	"strings"
 	"time"
